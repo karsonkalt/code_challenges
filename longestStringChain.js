@@ -9,7 +9,7 @@ var longestStrChain = function (words) {
     if (word in cache) return cache[word];
     let maxLength = 1;
 
-    console.log(word);
+    // console.log(word);
     for (let i = 0; i < word.length; i++) {
       let nw = rm(word, i);
       if (words.includes(nw)) {
@@ -27,12 +27,12 @@ var longestStrChain = function (words) {
 
   for (const word of words) {
     length.push(recurse(word));
-    console.log(cache);
-    console.log("----");
+    // console.log(cache);
+    // console.log("----");
   }
 
-  console.log(length);
-  console.log(cache);
+  //   console.log(length);
+  //   console.log(cache);
 
   return Math.max(...length);
 };
